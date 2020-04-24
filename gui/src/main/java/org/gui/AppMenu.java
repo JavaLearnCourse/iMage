@@ -117,7 +117,7 @@ public class AppMenu extends MenuBar {
 				fp.getChildren().addAll(sizeSlider, brightnessSlider, saveButton, cancelButton);
 				fp.setPadding(new Insets(20));
 				BorderPane bp = new BorderPane(imageView, null, null, fp, null);
-				VBox box = new VBox(app.getMenu(), bp);
+				VBox box = new VBox( bp);
 				Scene scene = new Scene(box, option.width(), option.height());
 
 				changeStage.setScene(scene);
@@ -133,7 +133,7 @@ public class AppMenu extends MenuBar {
 						imageView.setFitHeight(imageHeight);
 						imageView.setFitWidth(imageWidth);
 						BorderPane bp = new BorderPane(imageView, null, null, fp, null);
-						VBox box = new VBox(app.getMenu(), bp);
+						VBox box = new VBox(bp);
 						Scene scene = new Scene(box, option.width(), option.height());
 						changeStage.setScene(scene);
 						changeStage.show();

@@ -36,7 +36,7 @@ public class Paint {
 		Parent menu = stage.getScene().getRoot();
 		
 		FlowPane fpDraw = new FlowPane();
-		fpDraw.getChildren().addAll(rubberButton, pencilButton, textButton, textArea, saveButton);
+		fpDraw.getChildren().addAll(rubberButton, pencilButton, textButton, saveButton);
 		
 		
 		
