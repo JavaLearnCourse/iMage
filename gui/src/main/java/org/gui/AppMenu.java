@@ -29,14 +29,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.gui.options.Option;
 
-
-import static org.gui.messages.Constants.FILE_MENU;
-import static org.gui.messages.Constants.HELP_MENU;
-import static org.gui.messages.Constants.LOAD_ITEM;
-import static org.gui.messages.Constants.EXIT_ITEM;
-import static org.gui.messages.Constants.ABOUT_ITEM;
-import static org.gui.messages.Constants.CHANGING_TITLE;
-import static org.gui.messages.Constants.ABOUT_TITLE;
+import static org.gui.messages.Constants.*;
 
 public class AppMenu extends MenuBar {
 
@@ -57,6 +50,7 @@ public class AppMenu extends MenuBar {
 		super();
 		this.app = app;
 		Menu fileMenu = new Menu(app.getMessages().getString(FILE_MENU));
+		Menu pluginMenu = new Menu(app.getMessages().getString(PLUGIN_MENU));
 		Menu helpMenu = new Menu(app.getMessages().getString(HELP_MENU));
 
 		final FileChooser fc = new FileChooser();
@@ -226,6 +220,7 @@ public class AppMenu extends MenuBar {
 		cancelButton.setOnAction(event4);
 
 		this.getMenus().add(fileMenu);
+		this.getMenus().add(pluginMenu);
 		this.getMenus().add(helpMenu);
 
 	}

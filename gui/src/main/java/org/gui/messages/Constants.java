@@ -10,6 +10,8 @@ public class Constants {
     public static final String LOAD_ITEM = "LoadItem";
     public static final String EXIT_ITEM = "ExitItem";
     public static final String ABOUT_ITEM = "AboutItem";
+    public static final String PLUGIN_MENU = "PluginMenu";
+
     
 
 }
