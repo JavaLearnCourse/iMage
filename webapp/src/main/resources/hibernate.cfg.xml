@@ -9,7 +9,7 @@
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="connection.url">jdbc:mysql://localhost:3306/image?serverTimezone=UTC</property>
     <property name="connection.username">uimage</property>
-    <property name="connection.password">uimage</property>
+    <property name="connection.passwordValue">uimage</property>
 
     <!-- JDBC connection pool settings ... using built-in test pool -->
     <property name="connection.pool_size">10</property>

@@ -12,12 +12,12 @@
 <form th:action="@{registration}"
          th:object="${personForm}" method="POST">
          Логин:
-         <input type="text" th:field="*{login}" />    
+         <input type="text" th:field="*{loginValue}" />
          <br/>
          Пароль:
-         <input type="text" th:field="*{password}" />     
+         <input type="text" th:field="*{passwordValue}" />
          <br/>
-         <input type="submit" value="login" />
+         <input type="submit" value="loginValue" />
       </form>
        
       <br/>

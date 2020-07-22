@@ -19,17 +19,7 @@
           <div th:utext="${message}">
          
       </div>
-      <form th:action="@{login}"
-         th:object="${personForm}" method="POST">
-         Логин:
-         <input type="text" th:field="*{login}" />    
-         <br/>
-         Пароль:
-         <input type="text" th:field="*{password}" />     
-         <br/>
-         <input type="submit" value="login" />
-      </form>
-       
+      Тут должна быть форма логина на сайт
       <br/>
       <a href="">Забыли пароль?</a>
        
