@@ -220,7 +220,7 @@ public class AppMenu extends MenuBar {
 		cancelButton.setOnAction(event4);
 
 		this.getMenus().add(fileMenu);
-		this.getMenus().add(pluginMenu);
+	//	this.getMenus().add(pluginMenu);
 		this.getMenus().add(helpMenu);
 
 	}
