@@ -27,9 +27,8 @@ import static org.gui.messages.Constants.TITLE_OF_FRAME;
 public class App extends Application {
 
 	private Option opt;
-	private Messages mes;
 	private String currentTheme;
-	private  AppMenu menu;
+	private AppMenu menu;
 
 	public static void main(String[] args) {
 
@@ -39,15 +38,15 @@ public class App extends Application {
 	public App() {
 		opt = new Option();
 		currentTheme = opt.getTheme(Theme.STANDARD);
-		mes = new Messages(Locale.ENGLISH);
+
 
 
 	}
 	@Override
 	public void start(Stage stage) {
 
-		stage.setTitle(mes.getString(TITLE_OF_FRAME));
-		menu =  new AppMenu(this,stage);
+		stage.setTitle(getMessages().getString(TITLE_OF_FRAME));
+		menu =  new AppMenu(this, stage);
 		VBox vbox = new VBox(menu);
 		Scene scene = new Scene(vbox, opt.width(), opt.height());
 		scene.getStylesheets().add(currentTheme);
@@ -64,7 +63,8 @@ public class App extends Application {
 		return opt;
 	}
 
-	public Messages getMessages() {
+	public static Messages getMessages() {
+		Messages mes = new Messages(Locale.GERMAN);
 		return mes;
 	}
 

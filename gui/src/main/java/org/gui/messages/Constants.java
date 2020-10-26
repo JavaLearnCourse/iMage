@@ -11,6 +11,9 @@ public class Constants {
     public static final String EXIT_ITEM = "ExitItem";
     public static final String ABOUT_ITEM = "AboutItem";
     public static final String PLUGIN_MENU = "PluginMenu";
+    public static final String SAVE_BTN = "SaveBtn";
+    public static final String CANCEL_BTN = "CancelBtn";
+
 
     
 

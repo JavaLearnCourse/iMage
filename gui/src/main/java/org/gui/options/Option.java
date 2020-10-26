@@ -11,25 +11,24 @@ import java.util.Properties;
  */
 public final class Option {
 
-    private final Properties appProps;
-
 
     /**
      * Creates object for configuration of program.
      */
     public Option() {
+
+
+    }
+
+    private  static String getProp(final String key) {
         String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
         String appConfigPath = rootPath + "app.properties";
-        appProps = new Properties();
+        Properties appProps = new Properties();
         try {
             appProps.load(new FileInputStream(appConfigPath));
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-    }
-
-    private String getProp(final String key) {
         return appProps.getProperty(key);
     }
 
@@ -37,7 +36,7 @@ public final class Option {
      * Width of main window
      * @return current width from property file
      */
-    public int width() {
+    public static int width() {
         try {
             return  Integer.parseInt(getProp("width"));
         } catch (NumberFormatException ex) {
@@ -50,7 +49,7 @@ public final class Option {
      * Height of main window
      * @return  current height from property file
      */
-    public int height() {
+    public static int height() {
         try {
             return  Integer.parseInt(getProp("height"));
         } catch (NumberFormatException ex) {
@@ -59,7 +58,7 @@ public final class Option {
         }
     }
 
-    public String getTheme(final String theme) {
+    public static String getTheme(final String theme) {
         return "theme/" + theme + "/style.css";
     }
 }
