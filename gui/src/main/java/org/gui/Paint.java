@@ -55,14 +55,14 @@ public class Paint {
 		EventHandler<ActionEvent> event1 = new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent e) {
 			   InstrumentContainer c =  Context.getContext();
-			   c.drawRubber(gc,canvas);
+			   c.drawRubber(gc,canvas, image);
 			}
 		};
 
 		EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent e) {
 				InstrumentContainer c =  Context.getContext();
-				c.drawPencil(gc,canvas);
+				c.drawPencil(gc, canvas, image);
 			}
 		};
 		

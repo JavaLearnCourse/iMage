@@ -2,6 +2,7 @@ package org.gui.instruments;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -25,11 +26,11 @@ public class InstrumentContainer {
         this.rubber = rubber;
     }
 
-    public void drawPencil(GraphicsContext gc, Canvas c) {
-        pencil.draw(gc,c);
+    public void drawPencil(GraphicsContext gc, Canvas c, Image image) {
+        pencil.draw(gc,c, image);
     }
 
-    public void drawRubber(GraphicsContext gc, Canvas c) {
-        rubber.draw(gc,c);
+    public void drawRubber(GraphicsContext gc, Canvas c, Image image) {
+        rubber.draw(gc,c, image);
     }
 }

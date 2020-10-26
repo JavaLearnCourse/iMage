@@ -64,7 +64,7 @@ public class App extends Application {
 	}
 
 	public static Messages getMessages() {
-		Messages mes = new Messages(Locale.GERMAN);
+		Messages mes = new Messages(Locale.ENGLISH);
 		return mes;
 	}
 
