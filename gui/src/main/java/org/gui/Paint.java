@@ -52,45 +52,37 @@ public class Paint {
 		stage.setScene(new Scene(vb, 700, 700));
 		stage.show();
 
-		EventHandler<ActionEvent> event1 = new EventHandler<ActionEvent>() {
-			public void handle(ActionEvent e) {
-			   InstrumentContainer c =  Context.getContext();
-			   c.drawRubber(gc,canvas, image);
-			}
-		};
+		EventHandler<ActionEvent> event1 = e -> {
+           InstrumentContainer c =  Context.getContext();
+           c.drawRubber(gc,canvas, image);
+        };
 
-		EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() {
-			public void handle(ActionEvent e) {
-				InstrumentContainer c =  Context.getContext();
-				c.drawPencil(gc, canvas, image);
-			}
-		};
+		EventHandler<ActionEvent> event2 = e -> {
+            InstrumentContainer c =  Context.getContext();
+            c.drawPencil(gc, canvas, image);
+        };
 		
-		EventHandler<ActionEvent> event3 = new EventHandler<ActionEvent>() {
-			public void handle(ActionEvent e) {
-				Text text = new Text();
-				text.drawText(gc, canvas, textArea);
-			}
-		};
+		EventHandler<ActionEvent> event3 = e -> {
+            Text text = new Text();
+            text.drawText(gc, canvas, textArea);
+        };
 		
-		EventHandler<ActionEvent> event4 = new EventHandler<ActionEvent>() {
-			public void handle(ActionEvent e) {
-				  FileChooser savefile = new FileChooser();
-		            savefile.setTitle("Save File");
-		            
-		            File file = savefile.showSaveDialog(stage);
-		            if (file != null) {
-		                try {
-		                    WritableImage writableImage = new WritableImage(imageWidth, imageHeight);
-		                    canvas.snapshot(null, writableImage);
-		                    RenderedImage renderedImage = SwingFXUtils.fromFXImage(writableImage, null);
-		                    ImageIO.write(renderedImage, "png", file);
-		                } catch (IOException ex) {
-		                    System.out.println("Error!");
-		                }
-		            }
-			}
-		};
+		EventHandler<ActionEvent> event4 = e -> {
+              FileChooser savefile = new FileChooser();
+                savefile.setTitle("Save File");
+
+                File file = savefile.showSaveDialog(stage);
+                if (file != null) {
+                    try {
+                        WritableImage writableImage = new WritableImage(imageWidth, imageHeight);
+                        canvas.snapshot(null, writableImage);
+                        RenderedImage renderedImage = SwingFXUtils.fromFXImage(writableImage, null);
+                        ImageIO.write(renderedImage, "png", file);
+                    } catch (IOException ex) {
+                        System.out.println("Error!");
+                    }
+                }
+        };
 
 		rubberButton.setOnAction(event1);
 		pencilButton.setOnAction(event2);
