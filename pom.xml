@@ -41,8 +41,6 @@
 
   <modules>
     <module>gui</module>
-      <module>webapp</module>
-      <module>springbootmodule</module>
   </modules>
     <build>
         <plugins>
