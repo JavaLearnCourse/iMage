@@ -13,6 +13,8 @@ public class Constants {
     public static final String PLUGIN_MENU = "PluginMenu";
     public static final String SAVE_BTN = "SaveBtn";
     public static final String CANCEL_BTN = "CancelBtn";
+    public static final String CHOOSE_LANGUAGE = "ChangeLanguage";
+    public static final String LANGUAGE_ITEM = "Language";
 
 
     

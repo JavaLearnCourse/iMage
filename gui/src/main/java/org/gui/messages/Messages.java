@@ -35,7 +35,7 @@ public class Messages {
         catch (MissingResourceException e)
         {
             e.printStackTrace();
-            return '!' + key + '!';
+            return key;
         }
     }
 }
