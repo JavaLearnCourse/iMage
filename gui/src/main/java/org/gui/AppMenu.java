@@ -91,7 +91,7 @@ public class AppMenu extends MenuBar {
 //		ObservableList<String> langs = FXCollections.observableArrayList("One", "Two", "Three");
 //		ComboBox<String> comboBox = new ComboBox<>(langs);
 
-		Label lbl = new Label();
+//		Label lbl = new Label();
 		RadioMenuItem radioItem1 = new RadioMenuItem("English");
 		RadioMenuItem radioItem2 = new RadioMenuItem("German");
 		RadioMenuItem radioItem3 = new RadioMenuItem("French");
@@ -100,11 +100,11 @@ public class AppMenu extends MenuBar {
 		EventHandler<ActionEvent> actionEventEventHandler = actionEvent -> {
 			RadioMenuItem radioMenuItem = (RadioMenuItem)actionEvent.getSource();
 			switch (radioMenuItem.getText()){
-				case "English" : App.setLocale(Locale.ENGLISH); break;
-				case "German" : App.setLocale(Locale.GERMAN); break;
-				case "French" : App.setLocale(Locale.FRENCH); break;
+				case "English" : app.setLocale(Locale.ENGLISH); break;
+				case "German" : app.setLocale(Locale.GERMAN); break;
+				case "French" : app.setLocale(Locale.FRENCH); break;
 				default:
-					App.setLocale(Locale.ENGLISH);
+					app.setLocale(Locale.ENGLISH);
 			}
 			System.out.println(radioMenuItem.getText());
 		};
@@ -120,8 +120,6 @@ public class AppMenu extends MenuBar {
 
 		Menu menu = new Menu("Selection");
 		menu.getItems().addAll(radioItem1, radioItem2,radioItem3);
-
-		MenuItem aboutItem1 = new MenuItem(app.getMessages().getString(ABOUT_ITEM));
 
 		fileMenu.getItems().add(loadItem);
 		fileMenu.getItems().add(exitItem);
@@ -162,8 +160,6 @@ public class AppMenu extends MenuBar {
 			}
 
 		};
-
-
 
 		aboutItem.setOnAction(openAboutDialogEvent);
 		exitItem.setOnAction(closeEvent);

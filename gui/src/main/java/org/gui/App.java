@@ -63,20 +63,20 @@ public class App extends Application {
 		return menu;
 	}
 
-	public static void setLocale(Locale locale1) {
+	public void setLocale(Locale locale1) {
 
-		try (FileWriter writer = new FileWriter("lang.txt", false)) {
+		try (FileWriter writer = new FileWriter("src/main/resouces/lang.properties", false)) {
 			String text = locale1.toString();
 			writer.write(text);
 			writer.flush();
 		} catch (IOException ex) {
+
 		}
 		locale = locale1;
-
 	}
 
-	public static void getInit() {
-		try (Scanner myReaderIt = new Scanner(new File("lang.txt"))) {
+	public void getInit() {
+		try (Scanner myReaderIt = new Scanner(new File("src/main/resouces/lang.properties"))) {
 			List<String> linesIt = new ArrayList<>();
 			while (myReaderIt.hasNextLine())
 				linesIt.add(myReaderIt.nextLine());
@@ -86,7 +86,7 @@ public class App extends Application {
 		}
 	}
 
-	public static Locale getLocale() {
+	public Locale getLocale() {
 		return locale;
 	}
 
@@ -95,7 +95,7 @@ public class App extends Application {
 	}
 
 	public static Messages getMessages() {
-		Messages mes = new Messages(getLocale());
+		Messages mes = new Messages(locale);
 		return mes;
 	}
 
