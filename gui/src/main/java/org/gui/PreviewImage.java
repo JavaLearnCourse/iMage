@@ -16,7 +16,9 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.gui.options.Option;
 
-import static org.gui.messages.Constants.*;
+import static org.gui.messages.Constants.CANCEL_BTN;
+import static org.gui.messages.Constants.CHANGING_TITLE;
+import static org.gui.messages.Constants.SAVE_BTN;
 
 public class PreviewImage {
 
